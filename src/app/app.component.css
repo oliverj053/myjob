@@ -1,4 +1,31 @@
+ *{
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+body {
+    /*color:red;
+    background: url(../img/imagen.jpg);*/
+    background: rgba(111, 54, 140,0.9);
+    /*background-color:rgba(204, 200, 206 ,.5);*/
+    max-width:100%;
+
+   /* background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Roboto;*/
+
+}
+
 h1{
 font-size: 50px;
 color: red;
+}
+h2{
+    size: 50px;
+    color:blue;
+    /*border-block-end-color: black;
+    border-block-end-style: solid;*/
 }
