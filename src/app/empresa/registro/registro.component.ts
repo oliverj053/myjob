@@ -31,7 +31,7 @@ export class RegistroComponent  {
   crearCuenta(){
     this.empresaA.id=Date.now();
     this.afDB.database.ref("empresa/"+this.empresaA.id).set(this.empresaA);
-    //alert("Datos Insertados Correctamente");
+    alert('Datos agregados');
     //this.empresaA={id:null,nombreEmpresa:null,ubicacion:null,nombreUsuario:null, apellidos:null,correo:null,contrasenia:null};
   
   }
