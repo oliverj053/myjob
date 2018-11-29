@@ -14,6 +14,7 @@ import{AngularFireAuthModule}from 'angularfire2/auth';
 import {environment} from '../environments/environment';
 import { from } from 'rxjs';
 import {FormsModule} from '@angular/forms';
+import { TrabajadorComponent } from './trabajador/trabajador.component';
 
 //arreglo que va a contener los enlaces a mostrar
 const appRoutes:Routes=[
@@ -26,7 +27,8 @@ const appRoutes:Routes=[
   declarations: [
     AppComponent,
     LoginEComponent,
-    RegistroComponent
+    RegistroComponent,
+    TrabajadorComponent
   ],
   imports: [
     BrowserModule,
