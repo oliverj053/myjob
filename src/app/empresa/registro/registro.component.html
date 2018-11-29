@@ -1,0 +1,62 @@
+<!--<div class="container">
+    <div class="row">
+      <div class="col-md-5 text-center">
+        <div class="card mt-5">
+          <div class="card-body" >
+        
+              <div class="form-group">
+                <input type="text" placeholder="Nombre De La Empresa" ([ngModel])="empresaA.nombreEmpresa">
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="Ubicación De La Empresa" ([ngModel])="empresaA.ubicacion">
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="Nombre" ([ngModel])="empresaA.nombreUsuario">
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="Apellido(s)" ([ngModel])="empresaA.apellidos">
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Correo Electrónico" ([ngModel])="empresaA.correo">
+              </div>
+              <div class="form-group">
+                <input type="password" placeholder="Contraseña" ([ngModel])="empresaA.contrasenia">
+              </div>
+              <div class="form-group">
+                <a class="btn btn-default btn-block" (click)="crearCuenta()">crear cuenta</a>
+              </div>
+              <hr>
+              <div class="form-group">
+                <h6>¿Ya tienes cuenta?<a routerLink="/login-e">Inicia Sesión</a></h6>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  -->
+
+
+
+<div class="col-md-6">
+  <h2>Nueva Empresa</h2>
+  <input class="form-control" type="text" placeholder="Nombre De La Empresa" [(ngModel)]="empresaA.nombreEmpresa">
+  <br>
+  <input class="form-control" type="text" placeholder="Ubicación" [(ngModel)]="empresaA.ubicacion">
+  <br>
+  <input class="form-control" type="text" placeholder="Nombre" [(ngModel)]="empresaA.nombreUsuario">
+  <br>
+  <input class="form-control" type="text" placeholder="Apellidos" [(ngModel)]="empresaA.apellidos">
+  <br>
+  <input class="form-control" type="email" placeholder="Correo Electrónico" [(ngModel)]="empresaA.correo">
+  <br>
+  <input class="form-control" type="password" placeholder="Contraseña" [(ngModel)]="empresaA.contrasenia">
+  <br>
+
+  <div class="row">
+    <div class="col-md-4">
+      <a class="btn btn-primary btn-block" (click)="crearCuenta()">crearCuenta</a>
+    </div>
+  </div>
+</div>
