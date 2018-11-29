@@ -15,6 +15,7 @@ import {environment} from '../environments/environment';
 import { from } from 'rxjs';
 import {FormsModule} from '@angular/forms';
 import { TrabajadorComponent } from './trabajador/trabajador.component';
+import { QuienesComponent } from './quienes/quienes.component';
 
 //arreglo que va a contener los enlaces a mostrar
 const appRoutes:Routes=[
@@ -28,7 +29,8 @@ const appRoutes:Routes=[
     AppComponent,
     LoginEComponent,
     RegistroComponent,
-    TrabajadorComponent
+    TrabajadorComponent,
+    QuienesComponent
   ],
   imports: [
     BrowserModule,
