@@ -1,3 +1,43 @@
-<p>
-  registro works!
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>registro</title>
+</head>
+<body>
+
+<div class="container" >
+ <div class="row">
+    <div class="col-md-4">
+<input type="text" name="nombreU" id="nombreU" placeholder="Nombre" title="Nombre del Usuario">
+<input type="text" name="app" id="app" placeholder="Apellido Paterno" title="Primer Apellido">
+<input type="text" name="apm" id="apm" placeholder="Apellido Materno" title="Segundo Apellido">
+</div>
+<div class="col-md-4">
+<input type="number" name="edad" id="edad" placeholder="Edad" title="Ingresa tu Edad">
+<select name="sexo" id="sexo">
+  <input type="email" name="email" id="email" placeholder="Email" title="Ingresa tu Email">
+ <option value="1">Masculino</option>
+ <option value="2">Femenino</option>
+</select>
+      </div>
+    <div class="col-md-4">     
+<input type="password" name="pass" id="pass" placeholder="Contraseña" title="Ingresa tu Contraseña">
+<input type="password" name="pass1" id="pass1" placeholder="Confirma tu Contraseña" title="Ingresa tu Contraseña Nuevamente">
+</div>
+</div>
+  <a class="btn btn-primary btn-block" (click)="iniciarSesion()" routerLink="/login-e">Iniciar Sesión</a>
+<div class="form-group">
+    <h6>¿Ya tienes cuenta?<a routerLink="/login-u">Inicia Sesión</a></h6>
+  </div>
+</div>
+
+
+
+
+  
+
+</body>
+</html>
