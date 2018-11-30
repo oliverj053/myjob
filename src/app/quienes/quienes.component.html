@@ -1,27 +1,78 @@
-<body><p ALIGN="justify">MyJob es una plataforma en donde puedes realizar busquedas de trabajo de forma rápida y segura, esta idea fué
-  realizada por los alumnos que conforman un equipo de desarrollo de la carrera de Sistemas Computacionales del Instituto Tecnológico de Tlaxiaco con el fin 
-  de ayudar a personas que se encuentran desempleadas o para aquellas empresas que necesitan personal para sus instalaciones.
-  <h4>Contactos</h4>
-  <P ALIGN="justify" margin-left=100px> Si ustede desea comunicarse con el equipo de desarrollo lo podrá hacer mediante los siguientes contactos:
-  <br>Vicente Perez Santiago
-  <br>e-mail: 
-  <br>Telefono:
-  <br>
-  <br>Oliver José José
-  <br>e-mail: 
-  <br>Telefono: 
-  <br>
-  <br>Eleazar Gonzales Sanjuan
-  <br>e-mail: 
-  <br>Telefono: 
-  <br>
-  <br>Andrés Reyes León
-  <br>e-mail:
-  <br>Telefono:
-  <br>
-  <br>Instituto Tecnológico de Tlaxiaco
-  <br>e-mail: 
-  <br>Telefono: 
-  <br>
-  <br>Heroica Ciudad de Tlaxiaco Oaxaca
-</body>
+<div class="jumbotron">
+    <h1>Hello, world!</h1>
+  </div>
+<ngb-accordion #acc="ngbAccordion">
+    <ngb-panel id="toggle-1" title="Vicente Perez Santiago">
+      <ng-template ngbPanelContent>
+          e-mail:
+          <br>facebook: <a href="www.facebook.com">Oliver</a>
+          <br>
+          <br>Telefono:
+      </ng-template>
+    </ngb-panel>
+
+    <ngb-panel id="toggle-2" title="Oliver José José">
+      <ng-template ngbPanelContent>
+          e-mail:
+          <br>facebook: <a href="www.facebook.com">Oliver</a>
+          <br>
+          <br>Telefono:
+      </ng-template>
+    </ngb-panel>
+
+    <ngb-panel id="toggle-3" title="Eleazar Gonzales Sanjuan">
+        <ng-template ngbPanelContent>
+
+<ngb-carousel *ngIf="images">
+  <ng-template ngbSlide>
+    <img [src]="images[0]" alt="Random first slide">
+    <div class="carousel-caption">
+      <h3>10 seconds between slides...</h3>
+      <p>This carousel uses customized default values.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img [src]="images[1]" alt="Random second slide">
+    <div class="carousel-caption">
+      <h3>No mouse events...</h3>
+      <p>This carousel doesn't pause or resume on mouse events</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img [src]="images[2]"  alt="Random third slide">
+    <div class="carousel-caption">
+      <h3>No keyboard...</h3>
+      <p>This carousel uses customized default values.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img [src]="images[3]" alt="Random fourth slide">
+    <div class="carousel-caption">
+      <h3>And no wrap after last slide.</h3>
+      <p>This carousel uses customized default values.</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+          e-mail:
+          <br>facebook: <a href="www.facebook.com">Oliver</a>
+          <br>
+          <br>Telefono:
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel id="toggle-4" title="Andrés Reyes León">
+          <ng-template ngbPanelContent>
+              e-mail: andres.rele@hotmail.com
+              <br>facebook: <a href="www.facebook.com">Andres Ryes</a>
+              <br>Telefono: 9531398162
+          </ng-template>
+        </ngb-panel>
+  </ngb-accordion>
+  <hr/>
+
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel title</h3> 
+      </div>
+      <div class="panel-body"> ::before Panel content ::after</div>
+  </div>

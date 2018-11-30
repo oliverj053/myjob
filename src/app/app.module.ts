@@ -16,15 +16,19 @@ import { from } from 'rxjs';
 import {FormsModule} from '@angular/forms';
 import { TrabajadorComponent } from './trabajador/trabajador.component';
 import { QuienesComponent } from './quienes/quienes.component';
+import { HomeComponent } from './home/home.component';
 
 import { AlertModule } from 'ngx-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 //arreglo que va a contener los enlaces a mostrar
 const appRoutes:Routes=[
  // {path:'',component:AppComponent},
   {path:'login-e',component:LoginEComponent},
   {path:'registro', component:RegistroComponent},
-  {path:'quienes', component:QuienesComponent}
+  {path:'quienes', component:QuienesComponent},
+  {path:'home', component:HomeComponent}
 ];
 
 @NgModule({
@@ -33,13 +37,15 @@ const appRoutes:Routes=[
     LoginEComponent,
     RegistroComponent,
     TrabajadorComponent,
-    QuienesComponent
+    QuienesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,AngularFireAuthModule,FormsModule,AlertModule.forRoot(),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
