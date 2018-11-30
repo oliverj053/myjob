@@ -21,7 +21,8 @@ import { QuienesComponent } from './quienes/quienes.component';
 const appRoutes:Routes=[
  // {path:'',component:AppComponent},
   {path:'login-e',component:LoginEComponent},
-  {path:'registro', component:RegistroComponent}
+  {path:'registro', component:RegistroComponent},
+  {path:'quienes', component:QuienesComponent}
 ];
 
 @NgModule({
