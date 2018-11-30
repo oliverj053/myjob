@@ -15,12 +15,15 @@ import {environment} from '../environments/environment';
 import { from } from 'rxjs';
 import {FormsModule} from '@angular/forms';
 import { LoginUComponent } from './Usuario/login-u/login-u.component';
+import { RegistroUsComponent } from './Usuario/registro-us/registro-us.component'
 
 //arreglo que va a contener los enlaces a mostrar
 const appRoutes:Routes=[
  // {path:'',component:AppComponent},
   {path:'login-e',component:LoginEComponent},
-  {path:'registro', component:RegistroComponent}
+  {path:'registro', component:RegistroComponent},
+  {path:'login-u', component:LoginUComponent},
+  {path:'registro_us', component:RegistroUsComponent}
 ];
 
 @NgModule({
@@ -28,7 +31,7 @@ const appRoutes:Routes=[
     AppComponent,
     LoginEComponent,
     RegistroComponent,
-    LoginUComponent
+    LoginUComponent, RegistroUsComponent
   ],
   imports: [
     BrowserModule,
