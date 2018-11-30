@@ -1,18 +1,20 @@
 <div class="col-md-6">
   <h2>Login De Empresa</h2>
-  <input class="form-control" type="email" placeholder="Correo Electrónico" [(ngModel)]="empresaA.correo">
+  <input class="form-control" type="email" placeholder="Correo Electrónico">
   <br>
-  <input class="form-control" type="password" placeholder="Contraseña" [(ngModel)]="empresaA.contrasenia">
+  <input class="form-control" type="password" placeholder="Contraseña">
   <br>
 
   <div class="row">
     <div class="col-md-4">
       <a class="btn btn-primary btn-block" (click)="iniciarSesion()" routerLink="/login-e">Iniciar Sesión</a>
     </div>
-
-  </div>
-  
-  <div class="form-group">
-      <h6>¿Ya tienes cuenta?<a routerLink="/login-e">  Inicia Sesión</a></h6>
+    <br>
+    <div class="form-group">
+      <h6>¿No tienes una cuenta?<a routerLink="/registro"> Registrate</a></h6>
     </div>
+  </div>
+
 </div>
+<br>
+<h1><a routerLink="/inicio">inicio Empresa</a></h1>
