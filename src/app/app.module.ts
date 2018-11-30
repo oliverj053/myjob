@@ -17,6 +17,8 @@ import {FormsModule} from '@angular/forms';
 import { TrabajadorComponent } from './trabajador/trabajador.component';
 import { QuienesComponent } from './quienes/quienes.component';
 
+import { AlertModule } from 'ngx-bootstrap';
+
 //arreglo que va a contener los enlaces a mostrar
 const appRoutes:Routes=[
  // {path:'',component:AppComponent},
@@ -37,7 +39,7 @@ const appRoutes:Routes=[
     BrowserModule,
     AppRoutingModule,RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,AngularFireAuthModule,FormsModule
+    AngularFireDatabaseModule,AngularFireAuthModule,FormsModule,AlertModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
