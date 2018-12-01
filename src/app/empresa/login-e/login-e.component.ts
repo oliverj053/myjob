@@ -13,4 +13,7 @@ export class LoginEComponent implements OnInit {
   ngOnInit() {
   }
  
+  login(form:NgForm){
+      console.log(form.value);
+  }
 }
