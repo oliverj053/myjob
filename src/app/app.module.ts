@@ -15,7 +15,11 @@ import {environment} from '../environments/environment';
 import { from } from 'rxjs';
 import {FormsModule} from '@angular/forms';
 import { LoginUComponent } from './Usuario/login-u/login-u.component';
-import { RegistroUsComponent } from './Usuario/registro-us/registro-us.component'
+import { RegistroUsComponent } from './Usuario/registro-us/registro-us.component';
+import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { PrivadoComponent } from './privado/privado.component';
+import { NotFoundComponent } from './not-found/not-found.component'
 
 //arreglo que va a contener los enlaces a mostrar
 const appRoutes:Routes=[
@@ -31,7 +35,7 @@ const appRoutes:Routes=[
     AppComponent,
     LoginEComponent,
     RegistroComponent,
-    LoginUComponent, RegistroUsComponent
+    LoginUComponent, RegistroUsComponent, HomeComponent, NavbarComponent, PrivadoComponent, NotFoundComponent
   ],
   imports: [
     BrowserModule,
