@@ -23,7 +23,7 @@ const appRoutes:Routes=[
   {path:'login-e',component:LoginEComponent},
   {path:'registro', component:RegistroComponent},
   {path:'login-u', component:LoginUComponent},
-  {path:'registro_us', component:RegistroUsComponent}
+  {path:'registro-us', component:RegistroUsComponent}
 ];
 
 @NgModule({
