@@ -29,7 +29,7 @@ const appRoutes:Routes=[
   declarations: [
     AppComponent,
     LoginEComponent,
-   
+   InicioComponent,
     TrabajadorComponent
   ],
   imports: [
