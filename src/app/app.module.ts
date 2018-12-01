@@ -9,7 +9,13 @@ import {AngularFireDatabaseModule}from 'angularfire2/database';
 import {environment} from '../environments/environment';
 import { from } from 'rxjs';
 import {FormsModule} from '@angular/forms';
+////
 import { TrabajadorComponent } from './trabajador/trabajador.component';
+import { Routes, RouterModule } from '@angular/router';
+import { LoginEComponent } from './empresa/login-e/login-e.component';
+import { InicioComponent } from './empresa/inicio/inicio.component';
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 
 //arreglo que va a contener los enlaces a mostrar
 const appRoutes:Routes=[
@@ -23,7 +29,7 @@ const appRoutes:Routes=[
   declarations: [
     AppComponent,
     LoginEComponent,
-    RegistroComponent,
+   
     TrabajadorComponent
   ],
   imports: [
