@@ -23,12 +23,12 @@ import { NotFoundComponent } from './Usuario/not-found/not-found.component'
 
 //arreglo que va a contener los enlaces a mostrar
 const appRoutes:Routes=[
- // {path:'',component:AppComponent},
+ {path:'',component:AppComponent},
   {path:'login-e',component:LoginEComponent},
   {path:'registro', component:RegistroComponent},
   {path:'login-u', component:LoginUComponent},
   {path:'registro-us', component:RegistroUsComponent},
-  //{path: '**',component:NotFoundComponent}
+  {path: '**',component:NotFoundComponent}
 
 ];
 

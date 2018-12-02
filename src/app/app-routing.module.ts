@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -9,8 +10,8 @@ import {RegistroUsComponent} from "./Usuario/registro-us/registro-us.component";
 import {NotFoundComponent} from "./Usuario/not-found/not-found.component";
 const routes: Routes = [
   {path:'',component:HomeComponent},
-  {path: 'login',component:LoginUComponent},
-  {path: 'registrou', component:RegistroUsComponent},
+  {path: 'login-u',component:LoginUComponent},
+  {path: 'registro-us', component:RegistroUsComponent},
   {path: 'privado',component:PrivadoComponent},
   {path:'**',component:NotFoundComponent }
 ];
@@ -20,3 +21,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+
+
