@@ -1,18 +1,21 @@
-<div class="col-md-6">
-  <h2>Login De Empresa</h2>
-  <input class="form-control" type="email" placeholder="Correo Electrónico" [(ngModel)]="empresaA.correo">
-  <br>
-  <input class="form-control" type="password" placeholder="Contraseña" [(ngModel)]="empresaA.contrasenia">
-  <br>
 
-  <div class="row">
-    <div class="col-md-4">
-      <a class="btn btn-primary btn-block" (click)="iniciarSesion()" routerLink="/login-e">Iniciar Sesión</a>
+  <div class="container text-center jumbotron">
+    <div class="col-md-6 text-center">
+      <h2>Login De Empresa</h2>
+      <input class="form-control" type="email" placeholder="Correo Electrónico" [(ngModel)]="empresaA.correo">
+      <br>
+      <input class="form-control" type="password" placeholder="Contraseña" [(ngModel)]="empresaA.contrasenia">
+      <br>
+
+      <div class="row">
+        <div class="col-md-4">
+          <a class="btn btn-primary btn-block" (click)="iniciarSesion()" routerLink="/login-e">Iniciar Sesión</a>
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <h6>¿Ya tienes cuenta?<a routerLink="/login-e"> Inicia Sesión</a></h6>
+      </div>
     </div>
-
   </div>
-  
-  <div class="form-group">
-      <h6>¿Ya tienes cuenta?<a routerLink="/login-e">  Inicia Sesión</a></h6>
-    </div>
-</div>
