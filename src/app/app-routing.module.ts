@@ -9,8 +9,8 @@ import {RegistroUsComponent} from "./Usuario/registro-us/registro-us.component";
 import {NotFoundComponent} from "./Usuario/not-found/not-found.component";
 const routes: Routes = [
   {path:'',component:HomeComponent},
-  {path: 'login-u',component:LoginUComponent},
-  {path: 'registro-us', component:RegistroUsComponent},
+  {path: 'login',component:LoginUComponent},
+  {path: 'registrou', component:RegistroUsComponent},
   {path: 'privado',component:PrivadoComponent},
   {path:'**',component:NotFoundComponent }
 ];
