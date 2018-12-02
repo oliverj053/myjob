@@ -1,21 +1,20 @@
-
-  <div class="container text-center jumbotron">
-    <div class="col-md-6 text-center">
-      <h2>Login De Empresa</h2>
-      <input class="form-control" type="email" placeholder="Correo Electrónico" [(ngModel)]="empresaA.correo">
-      <br>
-      <input class="form-control" type="password" placeholder="Contraseña" [(ngModel)]="empresaA.contrasenia">
-      <br>
-
-      <div class="row">
-        <div class="col-md-4">
-          <a class="btn btn-primary btn-block" (click)="iniciarSesion()" routerLink="/login-e">Iniciar Sesión</a>
+<body class="text-center" style="background: url(http://www.gpmauditors.com/wp-content/uploads/2015/03/mans.jpg) no-repeat fixed center;-webkit-background-size: cover;  -moz-background-size: cover; -o-background-size: cover;  background-size: cover;  height: 100%;width: 100% ;">
+    <form class="form-signin">
+        <div class="container jumbotron text-center" style="background-color: rgba(252, 252, 252, 0.5)">
+            <img src="https://cdn.icon-icons.com/icons2/1169/PNG/512/1489186737-constructiondigshovelworker_81809.png"
+                width="80" height="80" class="d-inline-block align-top" alt="">
+            <h1 class="h3 mb-3 font-weight-normal">Iniciar Sesión</h1>
+            <hr>
+            <label for="inputEmail" class="sr-only">Correo Electrónico</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electrónico" required autofocus>
+            <label for="inputPassword" class="sr-only">Contraseña</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+            <button class="btn btn-primary btn-block" (click)="iniciarSesion()" routerLink="/login-e">Iniciar sesion</button>
+            <div class="form-group">
+                    <h6>¿No tienes cuenta?<a routerLink="/login-e"> Registrate</a></h6>
+                  </div>
+            <hr>
+            <p class="mt-5 mb-3 text-muted">&copy; MyJob 2018</p>
         </div>
-
-      </div>
-
-      <div class="form-group">
-        <h6>¿Ya tienes cuenta?<a routerLink="/login-e"> Inicia Sesión</a></h6>
-      </div>
-    </div>
-  </div>
+    </form>
+</body>
