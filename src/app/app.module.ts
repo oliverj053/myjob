@@ -21,6 +21,7 @@ import { NavbarComponent } from './Usuario/navbar/navbar.component';
 import { PrivadoComponent } from './Usuario/privado/privado.component';
 import { NotFoundComponent } from './Usuario/not-found/not-found.component'
 import{AuthService} from "./Usuario/servicios/auth.service";
+import {AuthGuard} from "./Usuario/seguridad/auth.guard";
 //import 'rxjs/add/operator/map';
 //import {map} from "rxjs/operators";
 
@@ -49,7 +50,7 @@ const appRoutes:Routes=[
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,AngularFireAuthModule,FormsModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
