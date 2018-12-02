@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+//import {FormsModule} from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginEComponent } from './empresa/login-e/login-e.component';
@@ -20,6 +20,10 @@ import { HomeComponent } from './Usuario/home/home.component';
 import { NavbarComponent } from './Usuario/navbar/navbar.component';
 import { PrivadoComponent } from './Usuario/privado/privado.component';
 import { NotFoundComponent } from './Usuario/not-found/not-found.component'
+import{AuthService} from "./Usuario/servicios/auth.service";
+//import 'rxjs/add/operator/map';
+//import {map} from "rxjs/operators";
+
 
 //arreglo que va a contener los enlaces a mostrar
 const appRoutes:Routes=[
@@ -45,7 +49,7 @@ const appRoutes:Routes=[
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,AngularFireAuthModule,FormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
