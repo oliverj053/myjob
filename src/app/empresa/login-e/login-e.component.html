@@ -1,15 +1,16 @@
 <body class="text-center" style="background: url(https://images.pond5.com/business-background-skyscrapers-and-running-footage-011463753_prevstill.jpeg) no-repeat fixed center;-webkit-background-size: cover;  -moz-background-size: cover; -o-background-size: cover;  background-size: cover;  height: 100%;width: 100% ;">
-    <form class="form-signin">
+    <form class="form-signin"  #formLogin="ngForm" (ngSubmit)="login(formLogin)">
         <div class="container jumbotron text-center" style="background-color: rgba(252, 252, 252, 0.5)">
             <img src="https://cdn.icon-icons.com/icons2/1169/PNG/512/1489186737-constructiondigshovelworker_81809.png"
                 width="80" height="80" class="d-inline-block align-top" alt="">
             <h1 class="h3 mb-3 font-weight-normal">Iniciar Sesión</h1>
             <hr>
             <label for="inputEmail" class="sr-only">Correo Electrónico</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electrónico" required autofocus>
+            <input type="email" class="form-control" name="correo" id="correo" ngModel placeholder="Correo Electrónico">
             <label for="inputPassword" class="sr-only">Contrasenia</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
-            <button class="btn btn-primary btn-block" (click)="iniciarSesion()" routerLink="/login-e">Iniciar sesion</button>
+            <input type="password" class="form-control" name="contrasenia" ngModel
+            placeholder="Contraseña">
+            <button class="btn btn-primary btn-block" type="submit">Iniciar sesion</button>
             <div class="form-group">
                     <h6>¿No tienes cuenta?<a routerLink="/registro"> Registrate</a></h6>
                   </div>

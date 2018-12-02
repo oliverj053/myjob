@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-//firebase
-import{AngularFireDatabase,AngularFireList} from 'angularfire2/database';
-  import { from,observable} from 'rxjs';
-import { FirebaseDatabase } from 'angularfire2';
 
-//////
-import{RegistroComponent} from '../registro/registro.component'
-
+import{ServicioempService} from '../servicios/servicioemp.service';
+import{Empresa} from '../modelos/empresa';
+import { Key } from 'protractor';
+import { Router } from '@angular/router';
+import { Command } from 'selenium-webdriver';
 @Component({
   selector: 'app-login-e',
   templateUrl: './login-e.component.html',
@@ -15,12 +13,40 @@ import{RegistroComponent} from '../registro/registro.component'
 })
 export class LoginEComponent implements OnInit {
 
-  constructor() { }
+  
+  empresaList:Empresa[];
+  resultado:any[];
+  constructor(private servicioempService:ServicioempService,private router:Router) { }
+
 
   ngOnInit() {
+    this.servicioempService.getProducts().
+    valueChanges().subscribe(
+      empresa=>{
+        this.empresaList=empresa;
+      }
+    );
   }
-  iniciarSesion(){
+  
+  login(form:NgForm){
+    console.log(form.value);
+   //console.log(form.value);
+   //console.log(this.empresaList);
+    this.resultado=this.empresaList.filter(empresa=>empresa.correo==form.value.correo &&empresa.contrasenia==form.value.contrasenia);
+   //console.log(JSON.stringify(this.resultado));
+   localStorage.setItem('email',form.value.correo);
+   if(this.resultado[0]==null){
+     
+   console.log("array vacio");
+    alert('array vacio');}
+    else{
+      console.log(this.resultado[0]);
+      this.router.navigate(['/inicio']);
+      localStorage.setItem('email',form.value.correo);
+    }
     
-  }
+   
+}
+
 
 }
