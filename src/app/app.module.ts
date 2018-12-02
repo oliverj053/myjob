@@ -18,13 +18,15 @@ import { InicioComponent } from './empresa/inicio/inicio.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RegistroEComponent } from './empresa/registro-e/registro-e.component';
-
+///guards que permiten verificar si se inicio sesion antes de entrar
+import{LoginEGuard} from './empresa/login-e.guard';
+import{NologinEGuard} from './empresa/nologin-e.guard'
 //arreglo que va a contener los enlaces a mostrar
 const appRoutes:Routes=[
  // {path:'',component:AppComponent},
-  {path:'login-e',component:LoginEComponent},
+  {path:'login-e',component:LoginEComponent,canActivate:[NologinEGuard]},
   {path:'registro-e', component:RegistroEComponent},
-  {path:'inicio', component:InicioComponent}
+  {path:'inicio', component:InicioComponent,canActivate:[LoginEGuard]}
 ];
 
 @NgModule({
@@ -41,7 +43,7 @@ const appRoutes:Routes=[
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,FormsModule
   ],
-  providers: [ServicioempService],
+  providers: [ServicioempService,LoginEGuard,NologinEGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
