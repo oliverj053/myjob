@@ -1,8 +1,21 @@
 <nav class="navbar navbar-dark bg-dark">
-    <a href="/" class="navbar-brand">Myjob</a>
+    <a href="/" class="navbar-brand">MYJOB</a>
+    <li class="nav-item" *ngIf="isLogin">
+        <a routerLinkActive="active" routerLink="/privado" class="navbar-brand">Home</a>
+    </li>
+    <li class="nav-item" *ngIf="!isLogin">
     <a routerLinkActive="active" routerLink="/login-u" class="navbar-brand">Empleo</a>
+     </li>
+    <li class="nav-item" *ngIf="!isLogin">
     <a routerLinkActive="active" routerLink="/login-e" class="navbar-brand">Empresa</a>
+    </li>
+    <li class="nav-item" *ngIf="!isLogin">
     <a href="/" class="navbar-brand">Quienes somos</a>
+    </li>
+    <li class="nav-item" *ngIf="isLogin">
+      <a href="#" class="navbar-brand" (click)="onClickLogout()">Salir</a>
+    </li>
+    
   </nav>
 
   <div class="row">
