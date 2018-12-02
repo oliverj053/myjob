@@ -1,47 +1,53 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { LoginEComponent } from './empresa/login-e/login-e.component';
+import { Routes, RouterModule } from '@angular/router';
+import { RegistroComponent } from './empresa/registro/registro.component';
 
 //Firebase
 import {AngularFireModule}from 'angularfire2'; 
 import {AngularFireDatabaseModule}from 'angularfire2/database';
+import{AngularFireAuthModule}from 'angularfire2/auth';
 import {environment} from '../environments/environment';
 import { from } from 'rxjs';
 import {FormsModule} from '@angular/forms';
-////servicio
-import{ ServicioempService}from './empresa/servicios/servicioemp.service';
-//
 import { TrabajadorComponent } from './trabajador/trabajador.component';
-import { Routes, RouterModule } from '@angular/router';
-import { LoginEComponent } from './empresa/login-e/login-e.component';
-import { InicioComponent } from './empresa/inicio/inicio.component';
-import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
-import { RegistroEComponent } from './empresa/registro-e/registro-e.component';
+import { QuienesComponent } from './quienes/quienes.component';
+import { HomeComponent } from './home/home.component';
+
+import { AlertModule } from 'ngx-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 //arreglo que va a contener los enlaces a mostrar
 const appRoutes:Routes=[
  // {path:'',component:AppComponent},
   {path:'login-e',component:LoginEComponent},
-  {path:'registro-e', component:RegistroEComponent},
-  {path:'inicio', component:InicioComponent}
+  {path:'registro', component:RegistroComponent},
+  {path:'quienes', component:QuienesComponent},
+  {path:'home', component:HomeComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginEComponent,
-   InicioComponent,
+    RegistroComponent,
     TrabajadorComponent,
-    RegistroEComponent
+    QuienesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,FormsModule
+    AngularFireDatabaseModule,AngularFireAuthModule,FormsModule,AlertModule.forRoot(),
+    NgbModule
   ],
-  providers: [ServicioempService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
