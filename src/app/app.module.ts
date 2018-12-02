@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { LoginEComponent } from './empresa/login-e/login-e.component';
 import { Routes, RouterModule } from '@angular/router';
 import { RegistroComponent } from './empresa/registro/registro.component';
+import {FlashMessagesModule} from "angular2-flash-messages";
+import {FlashMessagesService} from "angular2-flash-messages";
 
 //Firebase
 import {AngularFireModule}from 'angularfire2'; 
@@ -48,9 +50,9 @@ const appRoutes:Routes=[
     BrowserModule,
     AppRoutingModule,RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,AngularFireAuthModule,FormsModule
+    AngularFireDatabaseModule,AngularFireAuthModule,FormsModule, FlashMessagesModule
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard, FlashMessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
