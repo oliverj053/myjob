@@ -12,49 +12,53 @@
           #nombreE ="ngModel" 
           [(ngModel)]="servicioempService.selecEmp.nombreE" 
           placeholder="Nombre De La Empresa">
+          <br>
       <input type="text" 
           class="form-control" 
           name="rfc" 
           #rfc ="ngModel" 
           [(ngModel)]="servicioempService.selecEmp.rfc" 
           placeholder="RFC De La Empresa">
+          <br>
           <input type="text" 
           class="form-control" 
           name="ubicacion" 
           #ubicacion="ngModel" 
           [(ngModel)]="servicioempService.selecEmp.ubicacion" 
           placeholder="Ubicación">
-
+          <br>
           <input type="text" 
           class="form-control" 
           name="nombreU" 
           #nombreU="ngModel" 
           [(ngModel)]="servicioempService.selecEmp.nombreU" 
           placeholder="Nombre De Usuario">
-
+          <br>
           <input type="text" 
           class="form-control" 
           name="apellidos" 
           #apellidos="ngModel" 
           [(ngModel)]="servicioempService.selecEmp.apellidos" 
           placeholder="Apellidos">
-
+          <br>
           <input type="email" 
           class="form-control" 
           name="correo" 
           #correo="ngModel" 
           [(ngModel)]="servicioempService.selecEmp.correo" 
           placeholder="Correo Electrónico">
+          <br>
           <input type="password" 
           class="form-control" 
           name="contrasenia" 
           #contrasenia="ngModel" 
           [(ngModel)]="servicioempService.selecEmp.contrasenia" 
           placeholder="Contraseña">
+          <br>
       <button class="btn btn-primary btn-block" ype="submit">Crear Cuenta</button>
       <br>
-      <button class="btn btn-secondary" type="reset" (click)="limpiarFormulario(formEmpresa )">
-        <i class="fas fa-sync-alt">Limpiar </i>
+      <button class="btn btn-secondary btn-block" type="reset" (click)="limpiarFormulario(formEmpresa )">
+        <i class="fas fa-sync-alt"> Limpiar </i>
       </button>
       <hr>
     

@@ -29,16 +29,12 @@ export class LoginEComponent implements OnInit {
   }
   
   login(form:NgForm){
-    console.log(form.value);
+    //console.log(form.value);
    //console.log(form.value);
    //console.log(this.empresaList);
     this.resultado=this.empresaList.filter(empresa=>empresa.correo==form.value.correo &&empresa.contrasenia==form.value.contrasenia);
-   //console.log(JSON.stringify(this.resultado));
-   localStorage.setItem('email',form.value.correo);
-   if(this.resultado[0]==null){
-     
-   console.log("array vacio");
-    alert('array vacio');}
+    if(this.resultado[0]==null){
+    alert('Ingresa todos tus datos');}
     else{
       console.log(this.resultado[0]);
       this.router.navigate(['/inicio']);

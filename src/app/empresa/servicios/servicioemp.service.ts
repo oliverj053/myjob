@@ -30,6 +30,7 @@ selecEmp: Empresa =new Empresa();
       correo:empresa.correo,
       contrasenia:empresa.contrasenia
     });
+    alert('Tu cuenta se ha registrado correctamente');
   }
 
   modificarEmpresa(empresa:Empresa){
