@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+.alert.flash-messages{
+margin-top: 10px;
+text-align: center auto;
+color: aqua;
+border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+}
