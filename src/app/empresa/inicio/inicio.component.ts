@@ -13,7 +13,7 @@ import { NgForm } from '@angular/forms';
 })
 export class InicioComponent implements OnInit {
   vacanteList:Vacante [];
-  constructor(private router:Router,private vacanteemppleoService: VacanteempleoService) { }
+  constructor(private router:Router,private vacanteemppleoService: VacanteempleoService,private vacanteemppleoService1: VacanteempleoService) { }
    ngOnInit() {
     this.vacanteemppleoService.getProducts()
     .snapshotChanges() //meto para obtener todos los cambios de la base de datos
@@ -26,8 +26,6 @@ export class InicioComponent implements OnInit {
       });
     });
 
-    this.limpiarFormulario();
-  
   }
 
 
@@ -48,19 +46,4 @@ export class InicioComponent implements OnInit {
     this.router.navigate(['/login-e']);
   }
 
-onSubmit(vacanteForm: NgForm) {
-  if (vacanteForm.value.id == null)
-    this.vacanteemppleoService.insertar(vacanteForm.value);
-  else
-    this.vacanteemppleoService.modificar(vacanteForm.value);
-
-  this.limpiarFormulario(vacanteForm);
-}
-
-limpiarFormulario(vacanteForm?: NgForm) {
-  if (vacanteForm != null) {
-    vacanteForm.reset();
-    this.vacanteemppleoService.vacantesel = new Vacante();
-  }
-}
 }
