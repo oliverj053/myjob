@@ -4,8 +4,8 @@ import { Router } from '@angular/router';
 import { VacanteempleoService } from '../servicios/vacanteempleo.service';
 import { Vacante } from '../modelos/vacante';
 
-import{ModalComponent} from './modal/modal.component';
-import { NgForm } from '@angular/forms';
+//import{ModalComponent} from'./modal/modal.component';
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
@@ -13,7 +13,7 @@ import { NgForm } from '@angular/forms';
 })
 export class InicioComponent implements OnInit {
   vacanteList:Vacante [];
-  constructor(private router:Router,private vacanteemppleoService: VacanteempleoService,private vacanteemppleoService1: VacanteempleoService) { }
+  constructor(private router:Router,private vacanteemppleoService: VacanteempleoService) { }
    ngOnInit() {
     this.vacanteemppleoService.getProducts()
     .snapshotChanges() //meto para obtener todos los cambios de la base de datos
@@ -25,13 +25,13 @@ export class InicioComponent implements OnInit {
         this.vacanteList.push(x as Vacante);
       });
     });
-
   }
 
 
+  
   onEdit(vacante: Vacante){
     this.vacanteemppleoService.vacantesel=Object.assign({},vacante);
- 
+   
     
     }
     
