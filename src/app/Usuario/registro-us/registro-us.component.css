@@ -1,0 +1,18 @@
+.btn-facebook, .btn-google, .btn-registro{
+    width: 32%;
+    right: 32%;
+}
+.btn-facebook{
+    background: #3b5998;
+    color: #fff;
+}
+.btn-google{
+    background: #dd4b39;
+    color:#fff;
+
+
+}
+.btn-registro{
+    background:#55acee;
+    color: #fff;
+}

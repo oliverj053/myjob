@@ -31,5 +31,19 @@ export class RegistroUsComponent implements OnInit {
       {cssClass:"alert-danger",timeout:4000});
     });
   }
+  onClickGoogleLogin(){
+    this.authService.loginGoogle()
+    .then((res) =>{
+      this.router.navigate(['/privado']);
+    }).catch( err => console.log(err.message));
+   }
+ onClickFacebookLogin(){
+ this.authService.loginFacebook().then((res) =>{
+   this.router.navigate(['/privado']);
+ }).catch(err => console.log(err.messsage));
+ 
+ }
+
+
 
 }

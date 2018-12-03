@@ -1,5 +1,5 @@
 
-.btn-facebook, .btn-google, .btn-registro{
+.btn-facebook, .btn-google, .btn-login{
     width: 32%;
     right: 32%;
 }
@@ -15,7 +15,7 @@
 
 
 }
-.btn-registro{
+.btn-login{
     background:#55acee;
     color: #fff;
 }
