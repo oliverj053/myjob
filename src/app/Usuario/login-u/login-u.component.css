@@ -1,5 +1,12 @@
-.btn-facebook, .btn-google, .btn-twitter{
+body {
+    /*color:red;*/
+    background: url("../img/imagen.jpg");
+}
+
+
+.btn-facebook, .btn-google, .btn-registro{
     width: 32%;
+    right: 32%;
 }
 .btn-facebook{
     background: #3b5998;
@@ -13,7 +20,7 @@
 
 
 }
-.btn-twitter{
+.btn-registro{
     background:#55acee;
     color: #fff;
 }
