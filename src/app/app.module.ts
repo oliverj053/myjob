@@ -27,6 +27,8 @@ import{ServicioempService} from'./empresa/servicios/servicioemp.service';
 //guards
 import{LoginEGuard} from'./empresa/login-e.guard';
 import{NologinEGuard} from'./empresa/nologin-e.guard';
+import { ModalComponent } from './empresa/inicio/modal/modal.component';
+////////////////////
 
 //arreglo que va a contener los enlaces a mostrar
 const appRoutes:Routes=[
@@ -46,7 +48,9 @@ const appRoutes:Routes=[
     TrabajadorComponent,
     QuienesComponent,
     HomeComponent,
-    InicioComponent
+    InicioComponent,
+    ModalComponent,
+  
   ],
   imports: [
     BrowserModule,
