@@ -15,6 +15,18 @@
     <li class="nav-item" *ngIf="isLogin">
       <a href="#" class="navbar-brand" (click)="onClickLogout()">Salir</a>
     </li>
+    <li class="nav-item" *ngIf="isLogin">
+      <a  class="nav-link">{{nombreUsuario}}</a>
+    </li>
+   <!--  <li class="nav-item">
+      <a class="nav-link">{{emailUsuario}}</a>
+    </li>-->
+    <li class="nav-item" *ngIf="isLogin">
+      <img src="{{fotoUsuario}}" class="rounded-circle">
+      <span *ngIf="isLogin" class="badge pill badge-secondary">
+          {{emailUsuario}}
+      </span>
+    </li>
     
   </nav>
 

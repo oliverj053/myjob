@@ -37,6 +37,11 @@ public flashMensaje : FlashMessagesService
     });
   }
 
-
+  onClickGoogleLogin(){
+   this.authService.loginGoogle()
+   .then((res) =>{
+     this.router.navigate(['/privado']);
+   }).catch( err => console.log(err.message));
+  }
 
 }
