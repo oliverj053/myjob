@@ -5,9 +5,6 @@ import { VacanteempleoService } from '../../servicios/vacanteempleo.service';
 //
 import { NgForm } from '@angular/forms';
 import { Vacante } from '../../modelos/vacante';
-
-
-
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
@@ -17,7 +14,7 @@ export class ModalComponent implements OnInit {
 
   closeResult: string;
 
-  constructor( private vacanteempleoService: VacanteempleoService) { }
+  constructor(private modalService: NgbModal, private vacanteempleoService: VacanteempleoService) { }
 
   ngOnInit() {
     this.vacanteempleoService.getProducts();
@@ -40,7 +37,17 @@ export class ModalComponent implements OnInit {
     }
   }
 
- 
+<<<<<<< HEAD
+=======
+  open(content?) {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+      this.closeResult = ``;
+    }, (reason) => {
+
+    });
+  }
+
+>>>>>>> parent of 6d62ade... inicio con mdal 22
 
 }
 

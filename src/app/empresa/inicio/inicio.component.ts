@@ -4,8 +4,8 @@ import { Router } from '@angular/router';
 import { VacanteempleoService } from '../servicios/vacanteempleo.service';
 import { Vacante } from '../modelos/vacante';
 
-import{ModalComponent} from './modal/modal.component';
-import { NgForm } from '@angular/forms';
+//import{ModalComponent} from'./modal/modal.component';
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
@@ -25,15 +25,13 @@ export class InicioComponent implements OnInit {
         this.vacanteList.push(x as Vacante);
       });
     });
-
-    this.limpiarFormulario();
-  
   }
 
 
+  
   onEdit(vacante: Vacante){
     this.vacanteemppleoService.vacantesel=Object.assign({},vacante);
- 
+   
     
     }
     
@@ -48,19 +46,4 @@ export class InicioComponent implements OnInit {
     this.router.navigate(['/login-e']);
   }
 
-onSubmit(vacanteForm: NgForm) {
-  if (vacanteForm.value.id == null)
-    this.vacanteemppleoService.insertar(vacanteForm.value);
-  else
-    this.vacanteemppleoService.modificar(vacanteForm.value);
-
-  this.limpiarFormulario(vacanteForm);
-}
-
-limpiarFormulario(vacanteForm?: NgForm) {
-  if (vacanteForm != null) {
-    vacanteForm.reset();
-    this.vacanteemppleoService.vacantesel = new Vacante();
-  }
-}
 }
