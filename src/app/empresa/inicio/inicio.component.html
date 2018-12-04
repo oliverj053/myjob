@@ -6,6 +6,7 @@
 
 
 <div class="card">
+<<<<<<< HEAD
   <div class="card-body">
     <h6 class="text-center">Lista de Vacantes Registrados</h6>
   </div>
@@ -26,6 +27,36 @@
     </tbody>
   </table>
 </div>
+=======
+    <div class="card-body">
+      <h6 class="text-center">Lista de Vacantes Registrados</h6>
+    </div>
+    <table class="table table-sm table-hover">
+      <tbody>
+        <tr *ngFor="let vacante of vacanteList">
+          <td>{{vacante.nombreEmpresa}}</td>
+          
+          <td>
+            <a class="btn btn-secondary text-white"(click)="onEdit(vacante)">
+              <i class="far fa-edit"></i>
+            </a>
+            <a class="btn btn-danger text-white"(click)="onDelete(vacante.id)">
+                <i class="fas fa-trash"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+
+
+
+
+>>>>>>> parent of 6d62ade... inicio con mdal 22
 
 
 

@@ -37,6 +37,17 @@ export class ModalComponent implements OnInit {
     }
   }
 
+<<<<<<< HEAD
+=======
+  open(content?) {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+      this.closeResult = ``;
+    }, (reason) => {
+
+    });
+  }
+
+>>>>>>> parent of 6d62ade... inicio con mdal 22
 
 }
 
