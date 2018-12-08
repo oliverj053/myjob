@@ -1,20 +1,68 @@
 <body class="text-center" style="background: url(https://images.pond5.com/business-background-skyscrapers-and-running-footage-011463753_prevstill.jpeg) no-repeat fixed center;-webkit-background-size: cover;  -moz-background-size: cover; -o-background-size: cover;  background-size: cover;  height: 100%;width: 100% ;">
-  <form class="form-signin">
+  <form class="form-signin" #formEmpresa="ngForm" (ngSubmit)="onSubmit(formEmpresa)">
     <div class="container jumbotron" style="background-color: rgba(252, 252, 252, 0.5)">
       <div>
       <img src="https://cdn.icon-icons.com/icons2/1169/PNG/512/1489186737-constructiondigshovelworker_81809.png" width="80"
         height="80" class="d-inline-block align-top" alt="">
       <h1 class="h3 mb-3 font-weight-normal">Nueva empresa</h1>
-      <input class="form-control" type="text" placeholder="Nombre De La Empresa" [(ngModel)]="empresaA.nombreEmpresa">
-      <input class="form-control" type="text" placeholder="Ubicación" [(ngModel)]="empresaA.ubicacion">
-      <hr>
-      <input class="form-control" type="text" placeholder="Nombre" [(ngModel)]="empresaA.nombreUsuario">
-      <input class="form-control" type="text" placeholder="Apellidos" [(ngModel)]="empresaA.apellidos">
-      <hr>
-      <input class="form-control" type="email" placeholder="Correo Electrónico" [(ngModel)]="empresaA.correo">
-      <input class="form-control" type="password" placeholder="Contraseña" [(ngModel)]="empresaA.contrasenia">
-      <button class="btn btn-primary btn-block" (click)="crearCuenta()" routerLink="/login-e">Crear Cuenta</button>
+      <input type="hidden" name="id" #id="ngModel" [(ngModel)]="servicioempService.selecEmp.id">
+      
+      <input type="text" 
+          class="form-control" 
+          name="nombreE" 
+          #nombreE ="ngModel" 
+          [(ngModel)]="servicioempService.selecEmp.nombreE" 
+          placeholder="Nombre De La Empresa">
+          <br>
+      <input type="text" 
+          class="form-control" 
+          name="rfc" 
+          #rfc ="ngModel" 
+          [(ngModel)]="servicioempService.selecEmp.rfc" 
+          placeholder="RFC De La Empresa">
+          <br>
+          <input type="text" 
+          class="form-control" 
+          name="ubicacion" 
+          #ubicacion="ngModel" 
+          [(ngModel)]="servicioempService.selecEmp.ubicacion" 
+          placeholder="Ubicación">
+          <br>
+          <input type="text" 
+          class="form-control" 
+          name="nombreU" 
+          #nombreU="ngModel" 
+          [(ngModel)]="servicioempService.selecEmp.nombreU" 
+          placeholder="Nombre De Usuario">
+          <br>
+          <input type="text" 
+          class="form-control" 
+          name="apellidos" 
+          #apellidos="ngModel" 
+          [(ngModel)]="servicioempService.selecEmp.apellidos" 
+          placeholder="Apellidos">
+          <br>
+          <input type="email" 
+          class="form-control" 
+          name="correo" 
+          #correo="ngModel" 
+          [(ngModel)]="servicioempService.selecEmp.correo" 
+          placeholder="Correo Electrónico">
+          <br>
+          <input type="password" 
+          class="form-control" 
+          name="contrasenia" 
+          #contrasenia="ngModel" 
+          [(ngModel)]="servicioempService.selecEmp.contrasenia" 
+          placeholder="Contraseña">
+          <br>
+      <button class="btn btn-primary btn-block" ype="submit">Crear Cuenta</button>
       <br>
+      <button class="btn btn-secondary btn-block" type="reset" (click)="limpiarFormulario(formEmpresa )">
+        <i class="fas fa-sync-alt"> Limpiar </i>
+      </button>
+      <hr>
+    
       <div class="form-group">
         <h6>¿Ya tienes cuenta?<a routerLink="/login-e"> Inicia Sesión</a></h6>
       </div>

@@ -20,13 +20,22 @@ import { HomeComponent } from './home/home.component';
 
 import { AlertModule } from 'ngx-bootstrap';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { InicioComponent } from './empresa/inicio/inicio.component';
+//servicios
+import{ServicioempService} from'./empresa/servicios/servicioemp.service';
 
+//guards
+import{LoginEGuard} from'./empresa/login-e.guard';
+import{NologinEGuard} from'./empresa/nologin-e.guard';
+import { ModalComponent } from './empresa/inicio/modal/modal.component';
+////////////////////
 
 //arreglo que va a contener los enlaces a mostrar
 const appRoutes:Routes=[
  // {path:'',component:AppComponent},
-  {path:'login-e',component:LoginEComponent},
+  {path:'login-e',component:LoginEComponent,canActivate:[NologinEGuard]},
   {path:'registro', component:RegistroComponent},
+  {path:'inicio', component:InicioComponent,canActivate:[LoginEGuard]},
   {path:'quienes', component:QuienesComponent},
   {path:'home', component:HomeComponent}
 ];
@@ -38,7 +47,10 @@ const appRoutes:Routes=[
     RegistroComponent,
     TrabajadorComponent,
     QuienesComponent,
-    HomeComponent
+    HomeComponent,
+    InicioComponent,
+    ModalComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -47,7 +59,7 @@ const appRoutes:Routes=[
     AngularFireDatabaseModule,AngularFireAuthModule,FormsModule,AlertModule.forRoot(),
     NgbModule
   ],
-  providers: [],
+  providers: [ServicioempService,LoginEGuard,NologinEGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
